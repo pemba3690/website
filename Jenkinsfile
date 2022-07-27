@@ -9,13 +9,13 @@ pipeline {
                 
             }
         }
-        stage('Test') { 
+        stage('Cloning repo') { 
             steps {
                 sh "sudo git clone https://github.com/pemba3690/website.git /var/www/html/"
                 // 
             }
         }
-        stage('Deploy') { 
+        stage('Reloading code') { 
             steps {
                 sh "sudo systemctl reload httpd"
             }
